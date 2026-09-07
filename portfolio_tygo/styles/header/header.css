@@ -1,0 +1,76 @@
+header.site-shell {
+    position: sticky;
+    top: 1rem;
+    z-index: 100;
+}
+
+.header {
+    position: relative;
+    margin-top: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header nav {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.header nav a {
+    position: relative;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+}
+
+.header nav a:hover {
+    color: #000000;
+    background-color: #ffffff;
+    transform: translateY(-3px) rotate(-2deg);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.18);
+}
+
+.header nav a::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    transform: skewX(-20deg);
+    transition: left 350ms ease;
+}
+
+.header nav a:hover::after {
+    left: 130%;
+}
